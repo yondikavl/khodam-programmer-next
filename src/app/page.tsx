@@ -2,7 +2,11 @@
 
 import { useEffect, useState, ChangeEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClock,
+  faFaceAngry,
+  faFaceDizzy,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [userInput, setUserInput] = useState<string>("");
@@ -64,7 +68,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen flex justify-center items-center bg-black text-black">
+    <main className="min-h-screen flex justify-center items-center bg-blue-950 text-black">
       <div className="bg-blue-950 p-8 min-w-96 max-w-96 rounded-xl relative">
         <div className="relative">
           <img className="rounded-lg w-full" src="cek-khodam.jpeg" alt="" />
@@ -107,6 +111,14 @@ export default function Home() {
           id="result"
         >
           <p className="p-4 font-bold">{result}</p>
+        </div>
+        <div className="flex justify-center p-4">
+          <a
+            href="https://www.instagram.com/yondikavl/"
+            className="px-4 py-2 bg-blue-900 text-whit rounded-lg"
+          >
+            👋
+          </a>
         </div>
       </div>
     </main>
